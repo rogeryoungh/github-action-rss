@@ -77,11 +77,14 @@ fn parser_atom(feed: atom_syndication::Feed, channel: &Channel) -> Vec<FeedsItem
     return feeds;
 }
 
-async fn fetch_feed(channels: &Vec<Channel>) -> Result<Vec<FeedsItem>, Box<dyn std::error::Error>> {
+async fn fetch_feed(channels: &Vec<Channel>) -> Vec<FeedsItem> {
     let mut contents = Vec::new();
 
     let timeout = Duration::from_secs(20);
-    let client = reqwest::ClientBuilder::default().timeout(timeout).build()?;
+    let client = reqwest::ClientBuilder::default()
+        .timeout(timeout)
+        .build()
+        .unwrap();
 
     for i in 0..channels.len() {
         let channel = &channels[i];
@@ -129,7 +132,7 @@ async fn fetch_feed(channels: &Vec<Channel>) -> Result<Vec<FeedsItem>, Box<dyn s
             },
         }
     }
-    return Ok(feeds);
+    return feeds;
 }
 
 fn get_channels(opml_file: opml::OPML) -> Vec<Channel> {
@@ -169,13 +172,18 @@ fn get_channels(opml_file: opml::OPML) -> Vec<Channel> {
 
 fn split_by_group(feeds: &Vec<FeedsItem>) -> HashMap<String, Vec<FeedsItem>> {
     let mut s: HashMap<String, Vec<FeedsItem>> = HashMap::new();
+
+    let now = chrono::Local::now();
+    let past_year = now.with_year(now.year() - 1).unwrap();
+
     for feed in feeds {
-        let keys = if feed.group.is_empty() {
-            vec!["".to_string()]
-        } else {
-            assert_ne!("", &feed.group);
-            vec!["".to_string(), feed.group.clone()]
-        };
+        let mut keys = vec!["".to_string()];
+        if !feed.group.is_empty() {
+            keys.push(feed.group.clone());
+        }
+        if feed.date.signed_duration_since(past_year).num_seconds() >= 0 {
+            keys.push("this-year".to_string());
+        }
 
         for k in keys {
             let v = &mut s.entry(k).or_insert(vec![]);
@@ -235,29 +243,23 @@ async fn main() {
     let opml_file = opml::OPML::from_reader(&mut file).unwrap();
 
     let channels = get_channels(opml_file);
-    let feeds = fetch_feed(&channels).await;
-    match feeds {
-        Err(err) => {
-            println!("{:#?}", err);
-        }
-        Ok(mut feeds) => {
-            feeds.sort_by_key(|f| f.date);
-            feeds.reverse();
+    let mut feeds = fetch_feed(&channels).await;
+    feeds.sort_by_key(|f| f.date);
+    feeds.reverse();
 
-            let s = split_by_group(&feeds);
+    let s = split_by_group(&feeds);
+    // println!("s = {:#?}", s);
 
-            for (k, v) in &s {
-                let group = if k.is_empty() {
-                    "index".to_string()
-                } else {
-                    k.to_string()
-                };
-                let mut path = md_path.clone();
-                path.push(std::format!("{}.md", group));
-                let mut output = std::fs::File::create(path).unwrap();
-                let doc = generate_md(&v);
-                output.write(doc.as_bytes()).unwrap();
-            }
-        }
+    for (k, v) in &s {
+        let group = if k.is_empty() {
+            "all".to_string()
+        } else {
+            k.to_string()
+        };
+        let mut path = md_path.clone();
+        path.push(std::format!("{}.md", group));
+        let mut output = std::fs::File::create(path).unwrap();
+        let doc = generate_md(&v);
+        output.write(doc.as_bytes()).unwrap();
     }
 }

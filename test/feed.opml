@@ -8,8 +8,9 @@
       <outline text="Awesome Rust Weekly" title="Awesome Rust Weekly" type="rss" xmlUrl="https://rust.libhunt.com/newsletter/feed" htmlUrl="https://rust.libhunt.com/newsletter/feed"/>
       <outline text="This Week in Rust" title="This Week in Rust" type="rss" xmlUrl="http://this-week-in-rust.org/atom.xml" htmlUrl="http://this-week-in-rust.org/"/>
     </outline>
-    <outline text="逆风笑" title="逆风笑">
+    <outline text="其他" title="其他">
       <outline text="逆风笑" title="逆风笑" type="rss" xmlUrl="https://rsshub.app/bilibili/user/dynamic/2019740" htmlUrl="https://space.bilibili.com/2019740"/>
+      <outline text="rogeryoungh" title="rogeryoungh" type="rss" xmlUrl="https://acm.rogery.dev/index.xml" htmlUrl="https://acm.rogery.dev/"/>
     </outline>
   </body>
 </opml>
