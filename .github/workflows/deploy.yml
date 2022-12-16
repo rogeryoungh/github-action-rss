@@ -1,0 +1,30 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip' # caching pip dependencies
+
+      - run: pip install -r requirements.txt
+
+      - run: cargo run ./test/feed.opml ./test/
+
+      - run: python3 ./scripts/md2html.py
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
