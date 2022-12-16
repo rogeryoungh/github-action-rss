@@ -4,6 +4,9 @@ import markdown
 import os
 import sys
 import shutil
+import requests
+
+gh_rss = requests.get('https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/github-markdown-css/5.1.0/github-markdown.min.css')
 
 html = '''
 <html lang="zh-cn">
@@ -24,8 +27,8 @@ html = '''
         padding: 15px;
     }
 }
+%s
 </style>
-<link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/github-markdown-css/5.1.0/github-markdown.min.css" rel="stylesheet">
 </head>
 <body>
 <article class="markdown-body">
@@ -40,8 +43,9 @@ def md2html(name):
     content = ''
     with open(f'./test/{name}.md') as f:
         content = f.read()
+    content = '# 这是您的今日资讯\n\n' + content
     ret = markdown.markdown(content)
-    ret = html % ret
+    ret = html % (gh_rss.text, ret)
     with open(f'./build/{name}.html', 'w') as f:
         f.write(ret)
 

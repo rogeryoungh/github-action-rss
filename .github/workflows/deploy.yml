@@ -18,9 +18,17 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: cargo run ./test/feed.opml ./test/
+      - run: cargo run --release ./test/feed.opml ./test/
 
       - run: python3 ./scripts/md2html.py
+
+      - run: python3 ./scripts/send.py
+        env:
+          MAIL_HOST: '${{ secrets.MAIL_HOST }}'
+          MAIL_PASS: '${{ secrets.MAIL_PASS }}'
+          MAIL_USER: '${{ secrets.MAIL_USER }}'
+          RECEIVERS: '${{ secrets.RECEIVERS }}'
+          SENDER:    '${{ secrets.SENDER }}'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -28,3 +36,13 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
+      - run: strip -s target/release/github-action-rss
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: target/release/github-action-rss
