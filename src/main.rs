@@ -248,7 +248,7 @@ async fn main() {
 
             for (k, v) in &s {
                 let group = if k.is_empty() {
-                    "default".to_string()
+                    "index".to_string()
                 } else {
                     k.to_string()
                 };
