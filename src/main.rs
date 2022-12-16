@@ -26,7 +26,7 @@ struct FeedsItem {
 fn parser_rss(feed: rss::Channel, channel: &Channel) -> Vec<FeedsItem> {
     let mut feeds = Vec::new();
     for item in feed.items {
-        let title = item.title.unwrap();
+        let title = item.title.unwrap_or("".to_string());
         let date = item.pub_date.expect("error format!");
         let date = match diligent_date_parser::parse_date(date.as_str()) {
             Some(date) => date,
@@ -54,22 +54,11 @@ fn parser_atom(feed: atom_syndication::Feed, channel: &Channel) -> Vec<FeedsItem
     let mut feeds = Vec::new();
     for item in feed.entries() {
         let title = item.title().to_string();
-        let date = item.published().unwrap().to_string();
-        let date = match diligent_date_parser::parse_date(date.as_str()) {
-            Some(date) => date,
-            None => {
-                println!(
-                    "error on parsing date `{}`, at parsering {}",
-                    date.as_str(),
-                    channel.url,
-                );
-                continue;
-            }
-        };
+        let date = item.updated();
         feeds.push(FeedsItem {
             title,
             author: channel.author.to_string(),
-            date,
+            date: date.clone(),
             url: item.links[0].href.clone(),
             group: channel.group.to_string(),
         })
@@ -173,7 +162,7 @@ fn get_channels(opml_file: opml::OPML) -> Vec<Channel> {
 fn split_by_group(feeds: &Vec<FeedsItem>) -> HashMap<String, Vec<FeedsItem>> {
     let mut s: HashMap<String, Vec<FeedsItem>> = HashMap::new();
 
-    let now = chrono::Local::now();
+    let now = chrono::Utc::now();
     let past_year = now.with_year(now.year() - 1).unwrap();
 
     for feed in feeds {
