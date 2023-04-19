@@ -54,7 +54,7 @@ fn parser_atom(feed: atom_syndication::Feed, channel: &Channel) -> Vec<FeedsItem
     let mut feeds = Vec::new();
     for item in feed.entries() {
         let title = item.title().to_string();
-        let date = item.updated();
+        let date = item.published().unwrap_or(item.updated());
         feeds.push(FeedsItem {
             title,
             author: channel.author.to_string(),
