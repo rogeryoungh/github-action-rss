@@ -27,7 +27,13 @@ fn parser_rss(feed: rss::Channel, channel: &Channel) -> Vec<FeedsItem> {
     let mut feeds = Vec::new();
     for item in feed.items {
         let title = item.title.unwrap_or("".to_string());
-        let date = item.pub_date.expect("error format!");
+        let date = match item.pub_date {
+            Some(date) => date,
+            None => {
+                println!("errof format date: {}", item.link.unwrap());
+                continue;
+            }
+        };
         let date = match diligent_date_parser::parse_date(date.as_str()) {
             Some(date) => date,
             None => {
@@ -43,7 +49,9 @@ fn parser_rss(feed: rss::Channel, channel: &Channel) -> Vec<FeedsItem> {
             title,
             author: channel.author.to_string(),
             date,
-            url: item.link.unwrap(),
+            url: item
+                .link
+                .unwrap_or_else(|| item.guid.expect(feed.link.as_str()).value().to_string()),
             group: channel.group.to_string(),
         })
     }
