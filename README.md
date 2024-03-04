@@ -1,4 +1,6 @@
 # GitHub Action RSS
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Frogeryoungh%2Fgithub-action-rss.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Frogeryoungh%2Fgithub-action-rss?ref=badge_shield)
+
 
 > 我对当前所有托管 RSS 服务的条数限制比较失望，并且邮件通知都需要付费功能，所以有了本项目。
 
@@ -11,3 +13,7 @@
 先 fork 本项目，opml 文件位于 `test/feed.opml`，并更新 `scripts/md2html.py` 中的 `base_url` 为你的地址，推送即可获得网页版。
 
 如需获得邮件，请在项目设置中添加 Secrets: `MAIL_HOST`、`MAIL_USER`、`MAIL_PASS`、`RECEIVERS`。
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Frogeryoungh%2Fgithub-action-rss.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Frogeryoungh%2Fgithub-action-rss?ref=badge_large)
