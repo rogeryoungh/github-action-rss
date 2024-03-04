@@ -11,17 +11,25 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4 # checkout current repo
+
+      - uses: actions/checkout@v4 # checkout upstream to get `md2html.py`
+        with:
+          repository: rogeryoungh/github-action-rss
+          path: ga-rss
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9'
           cache: 'pip' # caching pip dependencies
 
-      - run: pip install -r requirements.txt
-
-      - run: wget https://github.com/rogeryoungh/github-action-rss/releases/download/latest/github-action-rss && chmod +x ./github-action-rss && ./github-action-rss ./test/feed.opml ./test/
-
-      - run: python3 ./scripts/md2html.py
+      - run: |
+          wget https://github.com/rogeryoungh/github-action-rss/releases/download/latest/github-action-rss
+          chmod +x ./github-action-rss
+          mkdir build
+          ./github-action-rss ./feed.opml ./build/
+          pip install markdown
+          python3 ./ga-rss/scripts/md2html.py "https://rogeryoungh.github.io/github-action-rss"
 
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
