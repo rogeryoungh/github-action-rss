@@ -26,10 +26,10 @@ jobs:
       - run: |
           wget https://github.com/rogeryoungh/github-action-rss/releases/download/latest/github-action-rss
           chmod +x ./github-action-rss
-          mkdir build
-          ./github-action-rss ./feed.opml ./build/
+          mkdir -p ./ga-rss/build
+          ./github-action-rss ./feed.opml ./ga-rss/build/
           pip install -r ./ga-rss/requirements.txt
-          python3 ./ga-rss/scripts/md2html.py "https://rogeryoungh.github.io/github-action-rss"
+          cd ga-rss && python3 ./scripts/md2html.py "https://rogeryoungh.github.io/self-github-action-rss"
 
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
@@ -39,7 +39,7 @@ jobs:
           username: '${{ secrets.MAIL_USER }}'
           password: '${{ secrets.MAIL_PASS }}'
           subject: GitHub Action RSS
-          html_body: file://build/index.html
+          html_body: file://ga-rss/build/index.html
           to: '${{ secrets.RECEIVERS }}'
           from: GitHub Actions
 
@@ -48,4 +48,4 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./ga-rss/build
