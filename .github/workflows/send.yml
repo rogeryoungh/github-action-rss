@@ -28,7 +28,7 @@ jobs:
           chmod +x ./github-action-rss
           mkdir build
           ./github-action-rss ./feed.opml ./build/
-          pip install markdown
+          pip install -r ./ga-rss/requirements.txt
           python3 ./ga-rss/scripts/md2html.py "https://rogeryoungh.github.io/github-action-rss"
 
       - name: Send mail

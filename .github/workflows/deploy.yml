@@ -23,9 +23,9 @@ jobs:
           wget https://github.com/rogeryoungh/github-action-rss/releases/download/latest/github-action-rss
           chmod +x ./github-action-rss
           mkdir build
-          cargo run ./feed.opml ./build/
-          pip install markdown
-          python3 ./ga-rss/scripts/md2html.py "https://rogeryoungh.github.io/github-action-rss"
+          cargo run --release ./feed.opml ./build/
+          pip install -r requirements.txt
+          python3 ./scripts/md2html.py "https://rogeryoungh.github.io/github-action-rss"
 
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
