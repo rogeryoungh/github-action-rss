@@ -3,8 +3,6 @@
 import markdown
 import os
 import sys
-import shutil
-import requests
 
 base_url = sys.argv[1]
 
