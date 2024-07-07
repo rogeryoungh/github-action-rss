@@ -1,5 +1,9 @@
 # 2024
 
+2024-07-03, @This Week in Rust, [This Week in Rust 554](https://this-week-in-rust.org/blog/2024/07/03/this-week-in-rust-554/)
+
+2024-06-27, @Awesome Rust Weekly, [💻 Issue 418 - Farm: Fast vite compatible build tool written in Rust](https://rust.libhunt.com/newsletter/418)
+
 2024-06-26, @This Week in Rust, [This Week in Rust 553](https://this-week-in-rust.org/blog/2024/06/26/this-week-in-rust-553/)
 
 2024-06-20, @Awesome Rust Weekly, [💻 Issue 417 - Surface UEFI: Now using Rust](https://rust.libhunt.com/newsletter/417)
@@ -12,8 +16,6 @@
 
 2024-06-06, @Awesome Rust Weekly, [💻 Issue 415 - The borrow checker within](https://rust.libhunt.com/newsletter/415)
 
-2024-06-05, @This Week in Rust, [This Week in Rust 550](https://this-week-in-rust.org/blog/2024/06/05/this-week-in-rust-550/)
-
 2024-05-30, @Awesome Rust Weekly, [💻 Issue 414 - JetBrains releases RustRover IDE for Rust development](https://rust.libhunt.com/newsletter/414)
 
 2024-05-23, @Awesome Rust Weekly, [💻 Issue 413 - "100 exercises to learn Rust", a new learn-by-doing course to get started with Rust](https://rust.libhunt.com/newsletter/413)
@@ -23,5 +25,3 @@
 2024-05-09, @Awesome Rust Weekly, [💻 Issue 411 - Microsoft's $1M Vote of Confidence in Rust's Future](https://rust.libhunt.com/newsletter/411)
 
 2024-05-02, @Awesome Rust Weekly, [💻 Issue 410 - Lessons learned after 3 years of fulltime Rust game development, and why we're leaving Rust behind](https://rust.libhunt.com/newsletter/410)
-
-2024-04-25, @Awesome Rust Weekly, [💻 Issue 409 - Sized, DynSized, and Unsized by Niko Matsakis](https://rust.libhunt.com/newsletter/409)
