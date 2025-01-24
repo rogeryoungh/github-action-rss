@@ -1,5 +1,9 @@
 # 2025
 
+2025-01-22, @This Week in Rust, [This Week in Rust 583](https://this-week-in-rust.org/blog/2025/01/22/this-week-in-rust-583/)
+
+2025-01-16, @Awesome Rust Weekly, [💻 Issue 447 - Async Rust is about concurrency, not (just) performance](https://rust.libhunt.com/newsletter/447)
+
 2025-01-15, @This Week in Rust, [This Week in Rust 582](https://this-week-in-rust.org/blog/2025/01/15/this-week-in-rust-582/)
 
 2025-01-09, @Awesome Rust Weekly, [💻 Issue 446 - Great things about Rust that aren't just performance](https://rust.libhunt.com/newsletter/446)
@@ -14,8 +18,6 @@
 
 2024-12-26, @Awesome Rust Weekly, [💻 Issue 444 - Four limitations of Rust’s borrow checker](https://rust.libhunt.com/newsletter/444)
 
-2024-12-25, @This Week in Rust, [This Week in Rust 579](https://this-week-in-rust.org/blog/2024/12/25/this-week-in-rust-579/)
-
 2024-12-19, @Awesome Rust Weekly, [💻 Issue 443 - Thoughts on Rust Hashing](https://rust.libhunt.com/newsletter/443)
 
 2024-12-12, @Awesome Rust Weekly, [💻 Issue 442 - Limbo: A complete rewrite of SQLite in Rust](https://rust.libhunt.com/newsletter/442)
@@ -25,8 +27,6 @@
 2024-11-28, @Awesome Rust Weekly, [💻 Issue 440 - Nio: An Async Runtime for Rust](https://rust.libhunt.com/newsletter/440)
 
 2024-11-21, @Awesome Rust Weekly, [💻 Issue 439 - Async/Await Is Real And Can Hurt You](https://rust.libhunt.com/newsletter/439)
-
-2024-11-14, @Awesome Rust Weekly, [💻 Issue 438 - Welcoming two new Rust GPU maintainers](https://rust.libhunt.com/newsletter/438)
 
 # 2022
 
