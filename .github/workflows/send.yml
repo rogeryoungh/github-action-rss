@@ -32,7 +32,7 @@ jobs:
           cd ga-rss && python3 ./scripts/md2html.py "https://rogeryoungh.github.io/self-github-action-rss"
 
       - name: Send mail
-        uses: dawidd6/action-send-mail@v4
+        uses: dawidd6/action-send-mail@v5
         with:
           server_address: '${{ secrets.MAIL_HOST }}'
           server_port: 465
