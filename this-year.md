@@ -1,27 +1,27 @@
 # 2025
 
-2025-10-15, @This Week in Rust, [This Week in Rust 621](https://this-week-in-rust.org/blog/2025/10/15/this-week-in-rust-621/)
+2025-12-17, @This Week in Rust, [This Week in Rust 630](https://this-week-in-rust.org/blog/2025/12/17/this-week-in-rust-630/)
 
-2025-10-09, @Awesome Rust Weekly, [💻 Issue 485 - fibonacci-numbers crate with self-recursive dependencies](https://rust.libhunt.com/newsletter/485)
+2025-12-11, @Awesome Rust Weekly, [💻 Issue 494 - Rust in the kernel is no longer experimental](https://rust.libhunt.com/newsletter/494)
 
-2025-10-08, @This Week in Rust, [This Week in Rust 620](https://this-week-in-rust.org/blog/2025/10/08/this-week-in-rust-620/)
+2025-12-10, @This Week in Rust, [This Week in Rust 629](https://this-week-in-rust.org/blog/2025/12/10/this-week-in-rust-629/)
 
-2025-10-02, @Awesome Rust Weekly, [💻 Issue 484 - Proton Mail rewrote their mobile tech stack with Rust](https://rust.libhunt.com/newsletter/484)
+2025-12-04, @Awesome Rust Weekly, [💻 Issue 493 - Ubuntu migrating to Rust: uutils and sudo-rs shipping by default (lessons learned from VP of Engineering)](https://rust.libhunt.com/newsletter/493)
 
-2025-10-01, @This Week in Rust, [This Week in Rust 619](https://this-week-in-rust.org/blog/2025/10/01/this-week-in-rust-619/)
+2025-12-03, @This Week in Rust, [This Week in Rust 628](https://this-week-in-rust.org/blog/2025/12/03/this-week-in-rust-628/)
 
-2025-09-25, @Awesome Rust Weekly, [💻 Issue 483 - Git: Introduce Rust and announce it will become mandatory in the build system](https://rust.libhunt.com/newsletter/483)
+2025-11-27, @Awesome Rust Weekly, [💻 Issue 492 - APT Rust requirement raises questions](https://rust.libhunt.com/newsletter/492)
 
-2025-09-24, @This Week in Rust, [This Week in Rust 618](https://this-week-in-rust.org/blog/2025/09/24/this-week-in-rust-618/)
+2025-11-26, @This Week in Rust, [This Week in Rust 627](https://this-week-in-rust.org/blog/2025/11/26/this-week-in-rust-627/)
 
-2025-09-18, @Awesome Rust Weekly, [💻 Issue 482 - Asciinema 3.0: rewritten in Rust, adds live streaming, & upgraded file format.](https://rust.libhunt.com/newsletter/482)
+2025-11-20, @Awesome Rust Weekly, [💻 Issue 491 - Improved string formatting in Rust](https://rust.libhunt.com/newsletter/491)
 
-2025-09-11, @Awesome Rust Weekly, [💻 Issue 481 - Microsoft's Rust Bet: From Blue Screens to Safer Code](https://rust.libhunt.com/newsletter/481)
+2025-11-13, @Awesome Rust Weekly, [💻 Issue 490 - Announcing Magika 1.0: now faster, smarter, and rebuilt in Rust](https://rust.libhunt.com/newsletter/490)
 
-2025-09-04, @Awesome Rust Weekly, [💻 Issue 480 - Unix co-creator Brian Kernighan on Rust, distros and NixOS](https://rust.libhunt.com/newsletter/480)
+2025-11-06, @Awesome Rust Weekly, [💻 Issue 489 - Hard Rust requirements from May onward](https://rust.libhunt.com/newsletter/489)
 
-2025-08-28, @Awesome Rust Weekly, [💻 Issue 479 - Unexpected productivity boost of Rust](https://rust.libhunt.com/newsletter/479)
+2025-10-30, @Awesome Rust Weekly, [💻 Issue 488 - Date bug in Rust-based coreutils affects Ubuntu 25.10 automatic updates](https://rust.libhunt.com/newsletter/488)
 
-2025-08-21, @Awesome Rust Weekly, [💻 Issue 478 - Rust: Python’s new performance engine](https://rust.libhunt.com/newsletter/478)
+2025-10-23, @Awesome Rust Weekly, [💻 Issue 487 - Everybody's so Creative](https://rust.libhunt.com/newsletter/487)
 
-2025-08-14, @Awesome Rust Weekly, [💻 Issue 477 - Bevy's Fifth Birthday](https://rust.libhunt.com/newsletter/477)
+2025-10-16, @Awesome Rust Weekly, [💻 Issue 486 - Upcoming Rust language features for kernel development](https://rust.libhunt.com/newsletter/486)
