@@ -11,9 +11,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5 # checkout current repo
+      - uses: actions/checkout@v6 # checkout current repo
 
-      - uses: actions/checkout@v5 # checkout upstream to get `md2html.py`
+      - uses: actions/checkout@v6 # checkout upstream to get `md2html.py`
         with:
           repository: rogeryoungh/github-action-rss
           path: ga-rss
