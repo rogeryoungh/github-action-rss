@@ -1,5 +1,9 @@
 # 2026
 
+2026-01-28, @This Week in Rust, [This Week in Rust 636](https://this-week-in-rust.org/blog/2026/01/28/this-week-in-rust-636/)
+
+2026-01-22, @Awesome Rust Weekly, [💻 Issue 500 - Rust's Standard Library on the GPU](https://rust.libhunt.com/newsletter/500)
+
 2026-01-21, @This Week in Rust, [This Week in Rust 635](https://this-week-in-rust.org/blog/2026/01/21/this-week-in-rust-635/)
 
 2026-01-15, @Awesome Rust Weekly, [💻 Issue 499 - Bevy 0.18](https://rust.libhunt.com/newsletter/499)
@@ -14,8 +18,6 @@
 
 # 2025
 
-2025-12-31, @This Week in Rust, [This Week in Rust 632](https://this-week-in-rust.org/blog/2025/12/31/this-week-in-rust-632/)
-
 2025-12-25, @Awesome Rust Weekly, [💻 Issue 496 - GotaTun -- Mullvad's WireGuard Implementation in Rust](https://rust.libhunt.com/newsletter/496)
 
 2025-12-18, @Awesome Rust Weekly, [💻 Issue 495 - ty: An extremely fast Python type checker and language server](https://rust.libhunt.com/newsletter/495)
@@ -25,5 +27,3 @@
 2025-12-04, @Awesome Rust Weekly, [💻 Issue 493 - Ubuntu migrating to Rust: uutils and sudo-rs shipping by default (lessons learned from VP of Engineering)](https://rust.libhunt.com/newsletter/493)
 
 2025-11-27, @Awesome Rust Weekly, [💻 Issue 492 - APT Rust requirement raises questions](https://rust.libhunt.com/newsletter/492)
-
-2025-11-20, @Awesome Rust Weekly, [💻 Issue 491 - Improved string formatting in Rust](https://rust.libhunt.com/newsletter/491)
