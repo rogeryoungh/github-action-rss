@@ -1,5 +1,9 @@
 # 2026
 
+2026-02-04, @This Week in Rust, [This Week in Rust 637](https://this-week-in-rust.org/blog/2026/02/04/this-week-in-rust-637/)
+
+2026-01-29, @Awesome Rust Weekly, [💻 Issue 501 - Porting 100k lines from TypeScript to Rust using Claude Code in a month](https://rust.libhunt.com/newsletter/501)
+
 2026-01-28, @This Week in Rust, [This Week in Rust 636](https://this-week-in-rust.org/blog/2026/01/28/this-week-in-rust-636/)
 
 2026-01-22, @Awesome Rust Weekly, [💻 Issue 500 - Rust's Standard Library on the GPU](https://rust.libhunt.com/newsletter/500)
@@ -12,8 +16,6 @@
 
 2026-01-08, @Awesome Rust Weekly, [💻 Issue 498 - Brave overhauled its Rust adblock engine with FlatBuffers, cutting memory 75%](https://rust.libhunt.com/newsletter/498)
 
-2026-01-07, @This Week in Rust, [This Week in Rust 633](https://this-week-in-rust.org/blog/2026/01/07/this-week-in-rust-633/)
-
 2026-01-01, @Awesome Rust Weekly, [💻 Issue 497 - Why have C++ and Rust been the fastest-growing major programming languages from 2022 to 2025?](https://rust.libhunt.com/newsletter/497)
 
 # 2025
@@ -25,5 +27,3 @@
 2025-12-11, @Awesome Rust Weekly, [💻 Issue 494 - Rust in the kernel is no longer experimental](https://rust.libhunt.com/newsletter/494)
 
 2025-12-04, @Awesome Rust Weekly, [💻 Issue 493 - Ubuntu migrating to Rust: uutils and sudo-rs shipping by default (lessons learned from VP of Engineering)](https://rust.libhunt.com/newsletter/493)
-
-2025-11-27, @Awesome Rust Weekly, [💻 Issue 492 - APT Rust requirement raises questions](https://rust.libhunt.com/newsletter/492)
