@@ -41,7 +41,7 @@ jobs:
           subject: GitHub Action RSS
           html_body: file://ga-rss/build/index.html
           to: '${{ secrets.RECEIVERS }}'
-          from: GitHub Actions
+          from: '${{ secrets.MAIL_USER }}'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
