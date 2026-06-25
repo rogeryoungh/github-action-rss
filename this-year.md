@@ -1,5 +1,7 @@
 # 2026
 
+2026-06-18, @Awesome Rust Weekly, [💻 Issue 521 - OpenAI joins The Rust Foundation as a Platinun member and donates funds to support Rust maintenance](https://rust.libhunt.com/newsletter/521)
+
 2026-06-17, @This Week in Rust, [This Week in Rust 656](https://this-week-in-rust.org/blog/2026/06/17/this-week-in-rust-656/)
 
 2026-06-11, @Awesome Rust Weekly, [💻 Issue 520 - Grit: Rewriting Git in Rust with agents](https://rust.libhunt.com/newsletter/520)
@@ -11,8 +13,6 @@
 2026-06-03, @This Week in Rust, [This Week in Rust 654](https://this-week-in-rust.org/blog/2026/06/03/this-week-in-rust-654/)
 
 2026-05-28, @Awesome Rust Weekly, [💻 Issue 518 - Rust will save Linux from AI, says Greg Kroah-Hartman](https://rust.libhunt.com/newsletter/518)
-
-2026-05-27, @This Week in Rust, [This Week in Rust 653](https://this-week-in-rust.org/blog/2026/05/27/this-week-in-rust-653/)
 
 2026-05-21, @Awesome Rust Weekly, [💻 Issue 517 - Zerostack – A Unix-inspired coding agent written in pure Rust](https://rust.libhunt.com/newsletter/517)
 
