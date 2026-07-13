@@ -1,5 +1,9 @@
 # 2026
 
+2026-07-08, @This Week in Rust, [This Week in Rust 659](https://this-week-in-rust.org/blog/2026/07/08/this-week-in-rust-659/)
+
+2026-07-02, @Awesome Rust Weekly, [💻 Issue 523 - `std::io::Error` in `core` now on nightly](https://rust.libhunt.com/newsletter/523)
+
 2026-07-01, @This Week in Rust, [This Week in Rust 658](https://this-week-in-rust.org/blog/2026/07/01/this-week-in-rust-658/)
 
 2026-06-25, @Awesome Rust Weekly, [💻 Issue 522 - Bevy 0.19](https://rust.libhunt.com/newsletter/522)
@@ -12,8 +16,6 @@
 
 2026-06-11, @Awesome Rust Weekly, [💻 Issue 520 - Grit: Rewriting Git in Rust with agents](https://rust.libhunt.com/newsletter/520)
 
-2026-06-10, @This Week in Rust, [This Week in Rust 655](https://this-week-in-rust.org/blog/2026/06/10/this-week-in-rust-655/)
-
 2026-06-04, @Awesome Rust Weekly, [💻 Issue 519 - Announcing Zstandard in Rust](https://rust.libhunt.com/newsletter/519)
 
 2026-05-28, @Awesome Rust Weekly, [💻 Issue 518 - Rust will save Linux from AI, says Greg Kroah-Hartman](https://rust.libhunt.com/newsletter/518)
@@ -23,8 +25,6 @@
 2026-05-14, @Awesome Rust Weekly, [💻 Issue 516 - CUDA-oxide: Nvidia's official Rust to CUDA compiler](https://rust.libhunt.com/newsletter/516)
 
 2026-05-07, @Awesome Rust Weekly, [💻 Issue 515 - Async Rust never left the MVP state](https://rust.libhunt.com/newsletter/515)
-
-2026-04-30, @Awesome Rust Weekly, [💻 Issue 514 - Bugs Rust won't catch](https://rust.libhunt.com/newsletter/514)
 
 # 2022
 
